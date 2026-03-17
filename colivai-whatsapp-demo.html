@@ -557,38 +557,42 @@
         @media (max-width: 768px) {
             body { padding: 10px; justify-content: flex-start; padding-top: 50px; }
             .phone-frame {
-                width: min(310px, calc(100vw - 20px));
-                height: min(580px, calc(100vh - 180px));
+                width: min(340px, calc(100vw - 20px));
+                height: min(620px, calc(100vh - 160px));
+                height: min(620px, calc(100dvh - 160px));
             }
             .conversation-selector {
                 grid-template-columns: repeat(2, 1fr);
-                max-width: 310px;
+                max-width: 340px;
                 gap: 6px;
             }
             .conv-btn { padding: 8px 10px; font-size: 10px; }
             .back-link { top: 10px; left: 10px; font-size: 12px; padding: 6px 10px; }
-            .progress-container { width: min(300px, calc(100vw - 40px)); }
+            .progress-container { width: min(320px, calc(100vw - 40px)); }
             .progress-bar { width: 100%; }
         }
 
         @media (max-width: 480px) {
-            body { padding: 6px; padding-top: 44px; }
+            body { padding: 0; padding-top: 40px; }
             .phone-frame {
-                width: calc(100vw - 12px);
-                height: calc(100vh - 160px);
-                border-radius: 32px;
-                padding: 4px;
+                width: 100vw;
+                height: calc(100vh - 100px);
+                height: calc(100dvh - 100px);
+                border-radius: 0;
+                padding: 0;
+                border: none;
+                box-shadow: none;
             }
-            .phone-screen { border-radius: 28px; }
-            .dynamic-island { width: 80px; height: 24px; border-radius: 12px; top: 4px; }
+            .phone-screen { border-radius: 0; }
+            .dynamic-island { display: none; }
             .side-button { display: none; }
             .conversation-selector {
                 grid-template-columns: repeat(2, 1fr);
                 max-width: calc(100vw - 20px);
             }
-            .conv-btn { padding: 6px 8px; font-size: 9px; }
+            .conv-btn { padding: 8px 10px; font-size: 10px; }
             .back-link { font-size: 11px; top: 8px; left: 8px; }
-            .powered-by { font-size: 10px; margin-top: 12px; }
+            .powered-by { font-size: 10px; margin-top: 8px; }
         }
     </style>
 </head>

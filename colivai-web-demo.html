@@ -54,7 +54,7 @@
     box-shadow: 0 20px 80px rgba(0,0,0,0.12);
     display: flex;
     flex-direction: column;
-    overflow: visible;
+    overflow: hidden;
     border: 1px solid #d5d5d7;
     position: relative;
   }
@@ -648,17 +648,20 @@
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 768px) {
-    body { padding: 8px; align-items: flex-start; }
+    body { padding: 0; align-items: flex-start; }
     .browser-window {
       width: 100%;
-      height: calc(100vh - 16px);
-      border-radius: 12px;
+      height: 100vh;
+      height: 100dvh;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
     }
-    .browser-chrome { height: 44px; padding: 0 12px; gap: 8px; }
+    .browser-chrome { height: 40px; padding: 0 12px; gap: 8px; }
     .browser-dots { gap: 6px; }
     .dot { width: 10px; height: 10px; }
     .browser-url { font-size: 10px; padding: 4px 10px; margin: 0 8px; }
-    .app-header { height: 52px; padding: 0 14px; gap: 10px; }
+    .app-header { height: 48px; padding: 0 14px; gap: 10px; }
     .logo { font-size: 16px; gap: 6px; }
     .logo::before { font-size: 18px; }
     .nav-links { gap: 12px; }
@@ -668,19 +671,23 @@
     .ai-text { font-size: 13px; }
     .prop-grid { grid-template-columns: 1fr; gap: 8px; }
     .prop-image { height: 80px; }
+    .input-area { padding: 10px 14px; }
     .controls { padding: 8px 12px; gap: 12px; }
   }
 
   @media (max-width: 480px) {
-    .browser-chrome { height: 40px; padding: 0 10px; }
+    .browser-chrome { height: 36px; padding: 0 10px; }
     .browser-dots { display: none; }
     .browser-url { margin: 0; font-size: 10px; }
-    .app-header { height: 48px; padding: 0 12px; }
+    .app-header { height: 44px; padding: 0 12px; }
     .nav-links { display: none; }
     .logo { font-size: 15px; }
     .chat-area { padding: 10px; gap: 10px; }
     .msg-bubble { max-width: 95%; font-size: 12px; padding: 8px 12px; }
     .ai-response { max-width: 95%; }
+    .input-area { padding: 8px 10px; }
+    .controls { padding: 6px 10px; gap: 10px; }
+    .nav-btn { width: 32px; height: 32px; font-size: 16px; }
   }
 </style>
 </head>
