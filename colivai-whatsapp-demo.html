@@ -573,26 +573,26 @@
         }
 
         @media (max-width: 480px) {
-            body { padding: 0; padding-top: 40px; }
+            body { padding: 0; padding-top: 36px; overflow-y: auto; }
+            .demo-container { gap: 10px; }
             .phone-frame {
-                width: 100vw;
-                height: calc(100vh - 100px);
-                height: calc(100dvh - 100px);
-                border-radius: 0;
-                padding: 0;
-                border: none;
-                box-shadow: none;
+                width: calc(100vw - 16px);
+                height: 70vh;
+                height: 70dvh;
+                border-radius: 24px;
+                padding: 4px;
             }
-            .phone-screen { border-radius: 0; }
-            .dynamic-island { display: none; }
+            .phone-screen { border-radius: 20px; }
+            .dynamic-island { width: 70px; height: 20px; border-radius: 10px; top: 4px; }
             .side-button { display: none; }
             .conversation-selector {
                 grid-template-columns: repeat(2, 1fr);
                 max-width: calc(100vw - 20px);
+                gap: 6px;
             }
             .conv-btn { padding: 8px 10px; font-size: 10px; }
             .back-link { font-size: 11px; top: 8px; left: 8px; }
-            .powered-by { font-size: 10px; margin-top: 8px; }
+            .powered-by { font-size: 10px; margin-top: 4px; }
         }
     </style>
 </head>
