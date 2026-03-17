@@ -108,18 +108,28 @@
     flex-shrink: 0;
   }
 
+  .home-link {
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .home-link:hover {
+    background: #f0f0f2;
+  }
+
   .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
     color: var(--primary);
-  }
-
-  .logo::before {
-    content: '🏠';
-    font-size: 24px;
   }
 
   .nav-links {
@@ -705,9 +715,10 @@
   </div>
 
   <div class="app-header">
-    <div class="logo">coLiv✨</div>
+    <a href="index.html" class="home-link">←</a>
+    <div class="logo">coLiv AI</div>
     <div class="nav-links">
-      <a href="index.html">← Home</a>
+      <a href="index.html">Home</a>
       <a href="#">Properties</a>
       <a href="#">How It Works</a>
       <a href="#">Pricing</a>
